@@ -1,0 +1,14 @@
+stages:
+  - run_script
+  - print_branch
+
+run_script:
+  stage: run_script
+  script:
+    - chmod +x script.sh
+    - ./script.sh
+
+print_branch:
+  stage: print_branch
+  script:
+    - echo "Current branch name is $CI_COMMIT_REF_NAME"
